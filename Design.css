@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 70vh;
+   background-color: bisque;
+}
+/* Add a transition to smooth out changes in properties */
+.book-list, .add-book, .search-books {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover animation for the sections */
+.book-list:hover, .add-book:hover, .search-books:hover {
+    transform: scale(1.05);
+}
+
+/* Add an animation for the button on hover */
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add animation for search button */
+#search-query:focus + button {
+    transform: translateX(5px);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add a subtle background color change on button hover */
+button:hover {
+    background-color: #ff3300;
+}
+
+/* Animate the header text */
+h2 {
+    animation: slide-in 2s ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.book-list, .add-book, .search-books {
+    background-color: rgb(37, 165, 137);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+   font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: calc(100% - 12px);
+    padding: 8px;
+    border: 1px solid darkslategrey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00d9ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   
+}
+
+button:hover {
+    background-color:rgb(177, 100, 100);
+}
